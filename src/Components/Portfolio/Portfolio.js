@@ -10,7 +10,7 @@ function Portfolio() {
     return (
 
         <div classname='project-collection-div'>
-            Portfolio
+
             <br></br>
             <MDBCard className='project-card'>
                 <MDBCardImage src={fureverimage} position='top' alt='...' />
