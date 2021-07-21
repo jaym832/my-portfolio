@@ -41,6 +41,10 @@ body {
   background-color: #000000;
 }
 
-.nav-bar {
+/* .nav-bar {
   width: 100%;
+} */
+
+.nav-bar-container {
+  margin-left: 5px;
 }
