@@ -9,7 +9,7 @@ import contact from './Components/Contact/Contact'
 import spacecowboy from './Components/Portfolio/SpaceCowboy'
 import fureverhomes from './Components/Portfolio/FurEverHomes'
 import nutrition from './Components/Portfolio/Nutrition'
-
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 
 import {
@@ -35,9 +35,9 @@ function App() {
 
 
 
-      <MDBNavbar expand='lg' dark bgColor='dark'>
+      <MDBNavbar expand='lg' dark bgColor='dark' className='nav-bar'>
         <MDBContainer fluid>
-          <MDBNavbarBrand href='#'>Welcome</MDBNavbarBrand>
+          <MDBNavbarBrand href='/'>Welcome</MDBNavbarBrand>
           <MDBNavbarToggler
             type='button'
             data-target='#navbarColor02'
@@ -67,6 +67,20 @@ function App() {
           </MDBCollapse>
         </MDBContainer>
       </MDBNavbar>
+
+
+
+
+      {/* <Navbar bg="primary" variant="dark" className='nav-bar'>
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar> */}
 
       <Switch>
         <Route path="/" component={home} exact />
