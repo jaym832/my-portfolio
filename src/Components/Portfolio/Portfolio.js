@@ -1,0 +1,60 @@
+import React, { useState, Component } from 'react';
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
+import fureverimage from '../fureverhomes.png';
+import spacecowboy from '../spacecowboy.png'
+import nutrition from '../nutrition-app.png'
+import './Portfolio.css'
+
+
+function Portfolio() {
+    return (
+
+        <div classname='project-collection-div'>
+            Portfolio
+            <br></br>
+            <MDBCard className='project-card'>
+                <MDBCardImage src={fureverimage} position='top' alt='...' />
+                <MDBCardBody>
+                    <MDBCardTitle>FurEverHomes</MDBCardTitle>
+                    <MDBCardText>
+                        Flatiron capstone project. This web application allows its users to
+                        find pets to adopt and or re-home.
+                    </MDBCardText>
+                    <MDBBtn href='/fureverhomes'>view</MDBBtn>
+                </MDBCardBody>
+            </MDBCard>
+
+            <MDBCard className='project-card'>
+                <MDBCardImage src={spacecowboy} position='top' alt='...' />
+                <MDBCardBody>
+                    <MDBCardTitle>Space Cowboy</MDBCardTitle>
+                    <MDBCardText>
+                        Made this for my phase 4 project in Flatiron. My partner and i created a simple game
+                        called Space Cowboy.
+                    </MDBCardText>
+                    <MDBBtn href='/spacecowboy'>view</MDBBtn>
+                </MDBCardBody>
+            </MDBCard>
+
+
+            <MDBCard className='project-card'>
+                <MDBCardImage src={nutrition} position='top' alt='...' />
+                <MDBCardBody>
+                    <MDBCardTitle>Nutrition Calculator</MDBCardTitle>
+                    <MDBCardText>
+                        For my phase 3 project at Flatiron, i created a calorie counting web application.
+                    </MDBCardText>
+                    <MDBBtn href='/nutrition'>view</MDBBtn>
+                </MDBCardBody>
+            </MDBCard>
+
+
+
+        </div>
+
+
+
+    );
+}
+
+export default Portfolio;

@@ -1,0 +1,29 @@
+.typistDiv {
+  margin-top: 10px;
+  font-size: 50px;
+  /* text-align: center; */
+  color: white;
+  font-family: "Amatic SC", cursive;
+}
+
+.pictureDiv {
+  /* text-align: center; */
+  margin-top: 5%;
+  font-family: "Amatic SC", cursive;
+}
+.mainpic {
+  width: 300px;
+}
+
+.icon {
+  width: 50px;
+  padding-right: 10px;
+}
+@font-face {
+  font-family: "Amatic SC";
+  src: url("./Fonts/AmaticSC-Bold.ttf");
+}
+
+.mainDiv {
+  text-align: center;
+}
