@@ -11,66 +11,14 @@ import fureverhomes from './Components/Portfolio/FurEverHomes'
 import nutrition from './Components/Portfolio/Nutrition'
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 
-// import {
-//   MDBNavbar,
-//   MDBContainer,
-//   MDBIcon,
-//   MDBNavbarNav,
-//   MDBNavbarItem,
-//   MDBNavbarLink,
-//   MDBNavbarToggler,
-//   MDBNavbarBrand,
-//   MDBCollapse,
-//   MDBBtn
-// } from 'mdb-react-ui-kit';
 
 
 function App() {
-  // const [showNavColorSecond, setShowNavColorSecond] = useState(false);
 
 
   return (
 
     <BrowserRouter>
-
-
-
-
-
-      {/* <MDBNavbar expand='lg' dark bgColor='dark' className='nav-bar'>
-        <MDBContainer fluid>
-          <MDBNavbarBrand href='/'>Welcome</MDBNavbarBrand>
-          <MDBNavbarToggler
-            type='button'
-            data-target='#navbarColor02'
-            aria-controls='navbarColor02'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-            onClick={() => setShowNavColorSecond(!showNavColorSecond)}
-          >
-            <MDBIcon icon='bars' fas />
-          </MDBNavbarToggler>
-          <MDBCollapse show={showNavColorSecond} navbar id='navbarColor02'>
-            <MDBNavbarNav className='me-auto mb-2 mb-lg-0'>
-              <MDBNavbarItem className='active'>
-                <MDBNavbarLink aria-current='page' href='/'>
-                  Home
-                </MDBNavbarLink>
-              </MDBNavbarItem>
-              <MDBNavbarItem>
-                <MDBNavbarLink href='/about'>About</MDBNavbarLink>            </MDBNavbarItem>
-              <MDBNavbarItem>
-                <MDBNavbarLink href='/portfolio'>Portfolio</MDBNavbarLink>
-              </MDBNavbarItem>
-              <MDBNavbarItem>
-                <MDBNavbarLink href='/contact'>Contact</MDBNavbarLink>
-              </MDBNavbarItem>
-            </MDBNavbarNav>
-          </MDBCollapse>
-        </MDBContainer>
-      </MDBNavbar> */}
-
-
 
 
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -89,15 +37,6 @@ function App() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-
-
-
-
-
-
-
-
 
 
 
