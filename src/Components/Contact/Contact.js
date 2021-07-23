@@ -42,11 +42,11 @@ function Contact() {
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label>Email address:</Form.Label>
                         <Form.Control type="email" name='email' />
                     </Form.Group>
                     <Form.Group className="mb-3">
-                        <Form.Label>Subject</Form.Label>
+                        <Form.Label>Subject:</Form.Label>
                         <Form.Control name='subject' />
                     </Form.Group>
 
