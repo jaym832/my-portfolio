@@ -10,7 +10,7 @@ function About() {
                 <h1>About me :</h1>
 
                 <p> My name is Javier Marin and i am a junior full stack developer. I am currently
-                    a senior at the University of Houston where i am majoring in Computyer Information
+                    a senior at the University of Houston where i am majoring in Computer Information
                     Systems. I am also a graduate in the Software engineering program at Flatiron school.
                     <br></br><br></br>
                     Programming is a bittersweet art form for me. One minute i could be loving it and then the next i could be
