@@ -23,7 +23,7 @@ function App() {
 
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container className='nav-bar-container'>
-          <Navbar.Brand href="/">Welcome</Navbar.Brand>
+
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
