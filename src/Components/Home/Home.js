@@ -59,7 +59,7 @@ function Home() {
           {renderInfo()}
         </Typist>
       </div>
-      <a href='https://www.linkedin.com/in/javier-m-380251115/'><img className='icon' src={linkedin}></img></a>
+      <a href='https://www.linkedin.com/in/javier-j-marin/'><img className='icon' src={linkedin}></img></a>
       <a href='https://github.com/jaym832'><img className='icon' src={github}></img></a>
 
 
