@@ -38,7 +38,12 @@
 }
 
 body {
-  background-color: #000000;
+  /* background-color: #000000; */
+  background: url("./Components/background.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* .nav-bar {
@@ -47,4 +52,8 @@ body {
 
 .nav-bar-container {
   margin-left: 5px;
+}
+
+.navbar {
+  background-color: black;
 }

@@ -11,7 +11,7 @@ import {
   MDBNavbarLink
 } from 'mdb-react-ui-kit';
 import "./Home.css";
-import pic from '../Home/images/jj.png'
+import pic from '../Home/images/circle-cropped.png'
 import linkedin from '../Home/images/linkedin.png'
 import github from '../Home/images/github.png'
 
@@ -50,7 +50,7 @@ function Home() {
       <div className="pictureDiv">
 
         <img className="mainpic" src={pic}></img>
-        <h1>Javier J. Marin</h1>
+        <h1 className='home-name'>Javier J. Marin</h1>
 
       </div>
 

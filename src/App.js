@@ -21,7 +21,7 @@ function App() {
     <BrowserRouter>
 
 
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" variant="dark">
         <Container className='nav-bar-container'>
 
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
