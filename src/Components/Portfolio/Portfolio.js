@@ -49,6 +49,17 @@ function Portfolio() {
             </MDBCard>
 
 
+            <MDBCard className='project-card'>
+                <MDBCardImage src={nutrition} position='top' alt='...' />
+                <MDBCardBody>
+                    <MDBCardTitle>Nutrition Calculator</MDBCardTitle>
+                    <MDBCardText>
+                        For my phase 3 project at Flatiron, i created a calorie counting web application.
+                    </MDBCardText>
+                    <MDBBtn href='/nutrition'>view</MDBBtn>
+                </MDBCardBody>
+            </MDBCard>
+
 
         </div>
 
