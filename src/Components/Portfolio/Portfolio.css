@@ -10,16 +10,16 @@
 .projects-display {
   /* width: 55%; */
   width: 1000px;
-  height: 100vh;
+  height: 100%;
   max-width: 100%;
 
   margin: auto;
   background-color: white;
   text-align: center;
+  /* max-height: 100%; */
+  /* padding: 25px; */
+  padding-bottom: 25px;
 }
-/* .card-text {
-  max-width: 25%;
-} */
 
 .project-button {
   margin-left: 5px;
