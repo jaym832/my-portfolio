@@ -3,6 +3,7 @@ import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn }
 import fureverimage from '../fureverhomes.png';
 import spacecowboy from '../spacecowboy.png'
 import nutrition from '../nutrition-app.png'
+import war from '../war.png'
 import './Portfolio.css'
 
 
@@ -50,13 +51,13 @@ function Portfolio() {
 
 
             <MDBCard className='project-card'>
-                <MDBCardImage src={nutrition} position='top' alt='...' />
+                <MDBCardImage src={war} position='top' alt='...' />
                 <MDBCardBody>
-                    <MDBCardTitle>Nutrition Calculator</MDBCardTitle>
+                    <MDBCardTitle>War Card Game</MDBCardTitle>
                     <MDBCardText>
                         For my phase 3 project at Flatiron, i created a calorie counting web application.
                     </MDBCardText>
-                    <MDBBtn href='/nutrition'>view</MDBBtn>
+                    <MDBBtn href='/war'>view</MDBBtn>
                 </MDBCardBody>
             </MDBCard>
 

@@ -9,6 +9,7 @@ import contact from './Components/Contact/Contact'
 import spacecowboy from './Components/Portfolio/SpaceCowboy'
 import fureverhomes from './Components/Portfolio/FurEverHomes'
 import nutrition from './Components/Portfolio/Nutrition'
+import war from './Components/Portfolio/War'
 import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 
 
@@ -49,6 +50,8 @@ function App() {
         <Route path="/spacecowboy" component={spacecowboy} exact />
         <Route path="/nutrition" component={nutrition} exact />
         <Route path="/fureverhomes" component={fureverhomes} exact />
+        <Route path="/war" component={war} exact />
+
 
 
 
