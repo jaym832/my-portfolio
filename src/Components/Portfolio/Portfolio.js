@@ -10,7 +10,7 @@ import './Portfolio.css'
 function Portfolio() {
     return (
 
-        <div classname='project-collection-div'>
+        <div className='project-collection-div'>
 
             <br></br>
             <MDBCard className='project-card'>
