@@ -29,11 +29,11 @@ function Contact() {
     return (
 
         <div className='contact-div'>
-            <div className='email-form-div'>
-                <div className='contact-text'>
-                    Feel free to message me about anything!
+            <div className='contact-text'>
+                Feel free to message me about anything!
 
-                </div>
+            </div>
+            <div className='email-form-div'>
 
                 <Form onSubmit={sendEmail}>
                     <Form.Group className="mb-3">

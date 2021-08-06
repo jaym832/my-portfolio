@@ -30,7 +30,7 @@ function Portfolio() {
                 <MDBCardBody>
                     <MDBCardTitle>Space Cowboy</MDBCardTitle>
                     <MDBCardText>
-                        Made this for my phase 4 project in Flatiron. My partner and i created a simple game
+                        Made this for my phase 4 project in Flatiron. My partner and I created a simple retro style game
                         called Space Cowboy.
                     </MDBCardText>
                     <MDBBtn href='/spacecowboy'>view</MDBBtn>
@@ -43,7 +43,7 @@ function Portfolio() {
                 <MDBCardBody>
                     <MDBCardTitle>Nutrition Calculator</MDBCardTitle>
                     <MDBCardText>
-                        For my phase 3 project at Flatiron, i created a calorie counting web application.
+                        For my phase 3 project at Flatiron, I created a calorie counting web application.
                     </MDBCardText>
                     <MDBBtn href='/nutrition'>view</MDBBtn>
                 </MDBCardBody>

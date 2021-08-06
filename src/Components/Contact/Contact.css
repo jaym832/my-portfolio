@@ -1,17 +1,19 @@
 .contact-div {
   width: 600px;
-  height: 500px;
+  /* height: 500px; */
+  height: 100%;
   margin: auto;
   background-color: white;
   border-radius: 15px;
   margin-top: 25px;
+  margin-bottom: 25px;
   max-width: 100%;
+  padding: 30px;
 }
 
 .email-form-div {
   margin: auto;
   max-width: 100%;
-
   width: 400px;
 }
 
