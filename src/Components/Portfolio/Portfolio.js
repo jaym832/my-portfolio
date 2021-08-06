@@ -55,7 +55,7 @@ function Portfolio() {
                 <MDBCardBody>
                     <MDBCardTitle>War Card Game</MDBCardTitle>
                     <MDBCardText>
-                        For my phase 3 project at Flatiron, i created a calorie counting web application.
+                        Hackathon project game War. Created with some friends from my Flatiron cohort.
                     </MDBCardText>
                     <MDBBtn href='/war'>view</MDBBtn>
                 </MDBCardBody>
