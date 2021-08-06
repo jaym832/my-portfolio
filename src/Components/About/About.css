@@ -1,13 +1,14 @@
 .aboutDiv {
   background-color: white;
   width: 500px;
-  height: 500px;
+  height: 100%;
   border-radius: 15px;
   margin: auto;
   margin-top: 100px;
   max-width: 100%;
-  padding-left: 25px;
-  padding-right: 25px;
+  max-height: 100%;
+
+  padding: 25px;
 }
 .about-text {
   text-align: center;
