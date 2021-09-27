@@ -7,7 +7,7 @@ function About() {
         <div className="aboutDiv">
             <div className='about-text'>
 
-                <h1>About me :</h1>
+                <h1>About me. </h1>
 
                 <p> My name is Javier Marin and I am a junior full stack developer and currently
                     a senior at the University of Houston where I am majoring in Computer Information
