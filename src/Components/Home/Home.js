@@ -14,6 +14,8 @@ import "./Home.css";
 import pic from '../Home/images/circle-cropped.png'
 import linkedin from '../Home/images/linkedin.png'
 import github from '../Home/images/github.png'
+import resume from '../Home/images/cv.png'
+import resumeFile from '../Home/images/Resume2021.pdf'
 
 
 
@@ -61,6 +63,8 @@ function Home() {
       </div>
       <a href='https://www.linkedin.com/in/javier-j-marin/'><img className='icon' src={linkedin}></img></a>
       <a href='https://github.com/jaym832'><img className='icon' src={github}></img></a>
+      <a href={resumeFile}><img className='icon' src={resume}></img></a>
+
 
 
     </div>
