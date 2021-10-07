@@ -53,7 +53,7 @@ function Home() {
 
         <img className="mainpic" src={pic}></img>
         <h1 className='home-name'>Javier J. Marin</h1>
-            test
+            test2
       </div>
 
       <div className="typistDiv">
