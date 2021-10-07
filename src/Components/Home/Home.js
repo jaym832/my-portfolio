@@ -48,12 +48,12 @@ function Home() {
   return (
 
     <div className="mainDiv">
-
+      
       <div className="pictureDiv">
 
         <img className="mainpic" src={pic}></img>
         <h1 className='home-name'>Javier J. Marin</h1>
-
+            test
       </div>
 
       <div className="typistDiv">
