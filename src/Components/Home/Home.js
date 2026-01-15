@@ -15,7 +15,7 @@ import pic from "../Home/images/circle-cropped.png";
 import linkedin from "../Home/images/linkedin.png";
 import github from "../Home/images/github.png";
 import resume from "../Home/images/cv.png";
-import resumeFile from "../Home/images/Resume2024.pdf";
+import resumeFile from "../Home/images/Resume2025.pdf";
 
 function Home() {
   let myInfo = ["Hello, welcome to my page!", "Hope you enjoy it!"];
