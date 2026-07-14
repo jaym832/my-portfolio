@@ -2,37 +2,70 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import "./Contact.css";
 
+const emailConfig = {
+  serviceId: process.env.REACT_APP_EMAILJS_SERVICE_ID || "service_539kjli",
+  templateId: process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "template_ibtua9l",
+  publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY || "sCkqpt56ZiaPMVdsl",
+};
+
 const initialStatus = {
   tone: "idle",
   message:
-    "I am open to software engineering roles focused on customer-facing systems, internal platforms, integrations, and measurable product impact.",
+    "Useful context helps: team, product area, tech stack, and what problem you are trying to solve.",
+};
+
+const initialForm = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
 };
 
 function Contact() {
   const [status, setStatus] = useState(initialStatus);
   const [isSending, setIsSending] = useState(false);
+  const [form, setForm] = useState(initialForm);
+
+  function updateField(event) {
+    const { name, value } = event.target;
+    setForm((current) => ({ ...current, [name]: value }));
+  }
 
   function sendEmail(event) {
     event.preventDefault();
+
+    if (!emailConfig.serviceId || !emailConfig.templateId || !emailConfig.publicKey) {
+      setStatus({
+        tone: "error",
+        message:
+          "Email service is missing configuration. LinkedIn and GitHub are still available below.",
+      });
+      return;
+    }
+
     setIsSending(true);
     setStatus({ tone: "idle", message: "Sending message through the relay..." });
 
+    const templateParams = {
+      name: form.name,
+      from_name: form.name,
+      email: form.email,
+      reply_to: form.email,
+      subject: form.subject,
+      message: form.message,
+    };
+
     emailjs
-      .sendForm(
-        "service_qofzyvw",
-        "template_28vydm8",
-        event.target,
-        "user_gMw290SR4jHVVSbqWArD0"
-      )
+      .send(emailConfig.serviceId, emailConfig.templateId, templateParams, emailConfig.publicKey)
       .then(() => {
         setStatus({ tone: "success", message: "Message sent. Thanks for reaching out." });
-        event.target.reset();
+        setForm(initialForm);
       })
-      .catch(() => {
+      .catch((error) => {
+        const detail = error?.text || error?.message || "EmailJS rejected the request.";
         setStatus({
           tone: "error",
-          message:
-            "The form hit an issue. You can still reach me through LinkedIn or GitHub.",
+          message: `The form hit an issue: ${detail} You can still reach me through LinkedIn or GitHub.`,
         });
       })
       .finally(() => setIsSending(false));
@@ -42,11 +75,11 @@ function Contact() {
     <main className="page-shell contact-page">
       <section className="contact-hero">
         <p className="eyebrow">Contact</p>
-        <h1>Send a signal.</h1>
+        <h1>Tell me what you are building.</h1>
         <p>
-          Have a software engineering role, product platform, or complex
-          workflow worth talking through? Send the context and I will get back
-          to you.
+          I am most interested in teams that care about the quality of the
+          workflow, not just the ticket count. Send the shape of the role or
+          product problem and I will get back to you.
         </p>
       </section>
 
@@ -54,19 +87,19 @@ function Contact() {
         <form className="contact-form glass-panel" onSubmit={sendEmail}>
           <label>
             Name
-            <input name="name" required />
+            <input name="name" value={form.name} onChange={updateField} required />
           </label>
           <label>
             Email address
-            <input type="email" name="email" required />
+            <input type="email" name="email" value={form.email} onChange={updateField} required />
           </label>
           <label>
             Subject
-            <input name="subject" required />
+            <input name="subject" value={form.subject} onChange={updateField} required />
           </label>
           <label>
             Message
-            <textarea rows={6} name="message" required />
+            <textarea rows={6} name="message" value={form.message} onChange={updateField} required />
           </label>
 
           <button className="button button-primary" type="submit" disabled={isSending}>
@@ -83,7 +116,7 @@ function Contact() {
           <div className="console-lines">
             <span>contact.channel</span>
             <span>status: {status.tone}</span>
-            <span>focus: scalable systems, frontend architecture, backend integrations</span>
+            <span>best_threads: product teams, platform work, workflow tools</span>
             <span>{status.message}</span>
           </div>
 
