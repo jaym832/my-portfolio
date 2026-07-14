@@ -1,72 +1,64 @@
-import React, { useState, Component } from 'react';
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImage, MDBBtn } from 'mdb-react-ui-kit';
-import fureverimage from '../fureverhomes.png';
-import spacecowboy from '../spacecowboy.png'
-import nutrition from '../nutrition-app.png'
-import war from '../war.png'
-import './Portfolio.css'
-
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Portfolio.css";
+import projects from "./projectData";
 
 function Portfolio() {
-    return (
+  return (
+    <main className="page-shell portfolio-page">
+      <section className="portfolio-hero">
+        <p className="eyebrow">Work directory</p>
+        <h1>Public builds that support the resume story.</h1>
+        <p>
+          My professional resume now carries the strongest business outcomes:
+          revenue-driving commerce work, workflow accuracy gains, and internal
+          system optimization. These public projects add visible evidence of
+          full-stack fundamentals, interface thinking, API work, and shipping
+          habits.
+        </p>
+      </section>
 
-        <div className='project-collection-div'>
+      <section className="repo-grid" aria-label="Project case studies">
+        {projects.map((project, index) => (
+          <article className="repo-card glass-panel" key={project.slug}>
+            <div className="repo-media">
+              <img src={project.image} alt={`${project.title} interface`} />
+              <span>repo 0{index + 1}</span>
+            </div>
 
-            <br></br>
-            <MDBCard className='project-card'>
-                <MDBCardImage src={fureverimage} position='top' alt='...' />
-                <MDBCardBody>
-                    <MDBCardTitle>FurEverHomes</MDBCardTitle>
-                    <MDBCardText>
-                        Flatiron capstone project. This web application allows its users to
-                        find pets to adopt and or re-home.
-                    </MDBCardText>
-                    <MDBBtn href='/fureverhomes'>view</MDBBtn>
-                </MDBCardBody>
-            </MDBCard>
+            <div className="repo-body">
+              <div>
+                <p className="eyebrow">{project.eyebrow}</p>
+                <h2>{project.title}</h2>
+                <p>{project.summary}</p>
+              </div>
 
-            <MDBCard className='project-card'>
-                <MDBCardImage src={spacecowboy} position='top' alt='...' />
-                <MDBCardBody>
-                    <MDBCardTitle>Space Cowboy</MDBCardTitle>
-                    <MDBCardText>
-                        Made this for my phase 4 project in Flatiron. My partner and I created a simple retro style game
-                        called Space Cowboy.
-                    </MDBCardText>
-                    <MDBBtn href='/spacecowboy'>view</MDBBtn>
-                </MDBCardBody>
-            </MDBCard>
+              <dl className="repo-meta">
+                <div>
+                  <dt>Role</dt>
+                  <dd>{project.role}</dd>
+                </div>
+                <div>
+                  <dt>Result</dt>
+                  <dd>{project.result}</dd>
+                </div>
+              </dl>
 
+              <div className="repo-stack">
+                {project.stack.map((item) => (
+                  <span key={item}>{item}</span>
+                ))}
+              </div>
 
-            <MDBCard className='project-card'>
-                <MDBCardImage src={nutrition} position='top' alt='...' />
-                <MDBCardBody>
-                    <MDBCardTitle>Nutrition Calculator</MDBCardTitle>
-                    <MDBCardText>
-                        For my phase 3 project at Flatiron, I created a calorie counting web application.
-                    </MDBCardText>
-                    <MDBBtn href='/nutrition'>view</MDBBtn>
-                </MDBCardBody>
-            </MDBCard>
-
-
-            <MDBCard className='project-card'>
-                <MDBCardImage src={war} position='top' alt='...' />
-                <MDBCardBody>
-                    <MDBCardTitle>War Card Game</MDBCardTitle>
-                    <MDBCardText>
-                        Hackathon project game War. Created with some friends from my Flatiron cohort.
-                    </MDBCardText>
-                    <MDBBtn href='/war'>view</MDBBtn>
-                </MDBCardBody>
-            </MDBCard>
-
-
-        </div>
-
-
-
-    );
+              <Link className="button button-primary" to={`/${project.slug}`}>
+                Open case study
+              </Link>
+            </div>
+          </article>
+        ))}
+      </section>
+    </main>
+  );
 }
 
 export default Portfolio;

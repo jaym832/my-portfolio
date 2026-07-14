@@ -1,30 +1,136 @@
-.contact-div {
-  width: 600px;
-  /* height: 500px; */
-  height: 100%;
-  margin: auto;
-  background-color: white;
-  border-radius: 15px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  max-width: 100%;
-  padding: 30px;
+.contact-page {
+  display: grid;
+  gap: 56px;
 }
 
-.email-form-div {
-  margin: auto;
-  max-width: 100%;
-  width: 400px;
+.contact-hero {
+  max-width: 880px;
 }
 
-.button-div {
-  text-align: center;
-  margin-bottom: 20px;
+.contact-hero p {
+  max-width: 700px;
+  color: var(--muted-strong);
+  font-size: 1.12rem;
 }
 
-.mb-3 {
-  margin-left: 5px;
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 20px;
+  align-items: start;
 }
-.contact-text {
-  text-align: center;
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--muted-strong);
+  font-weight: 850;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 14px 15px;
+  background: rgba(0, 0, 0, 0.28);
+  color: var(--ink);
+  outline: none;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(119, 242, 161, 0.55);
+  box-shadow: 0 0 0 4px rgba(119, 242, 161, 0.12);
+}
+
+.contact-form button:disabled {
+  cursor: wait;
+  filter: grayscale(0.4);
+  opacity: 0.72;
+}
+
+.contact-console {
+  overflow: hidden;
+}
+
+.console-header {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+  padding: 14px;
+}
+
+.console-header span {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: var(--rose);
+}
+
+.console-header span:nth-child(2) {
+  background: var(--amber);
+}
+
+.console-header span:nth-child(3) {
+  background: var(--green);
+}
+
+.console-lines {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  color: var(--muted-strong);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.9rem;
+}
+
+.console-lines span:first-child {
+  color: var(--green);
+}
+
+.contact-console.success .console-lines span:nth-child(2) {
+  color: var(--green);
+}
+
+.contact-console.error .console-lines span:nth-child(2) {
+  color: var(--rose);
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 20px 20px;
+}
+
+.contact-links a {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0 14px;
+  color: var(--muted-strong);
+  font-weight: 850;
+}
+
+.contact-links a:hover,
+.contact-links a:focus-visible {
+  border-color: rgba(119, 242, 161, 0.45);
+  color: var(--green);
+  outline: none;
+}
+
+@media (max-width: 840px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,74 +1,108 @@
-import React, { useState, Component } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import emailjs from 'emailjs-com'
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import "./Contact.css";
 
-import './Contact.css'
-
+const initialStatus = {
+  tone: "idle",
+  message:
+    "I am open to software engineering roles focused on customer-facing systems, internal platforms, integrations, and measurable product impact.",
+};
 
 function Contact() {
+  const [status, setStatus] = useState(initialStatus);
+  const [isSending, setIsSending] = useState(false);
 
+  function sendEmail(event) {
+    event.preventDefault();
+    setIsSending(true);
+    setStatus({ tone: "idle", message: "Sending message through the relay..." });
 
-    function sendEmail(e) {
-        e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_qofzyvw",
+        "template_28vydm8",
+        event.target,
+        "user_gMw290SR4jHVVSbqWArD0"
+      )
+      .then(() => {
+        setStatus({ tone: "success", message: "Message sent. Thanks for reaching out." });
+        event.target.reset();
+      })
+      .catch(() => {
+        setStatus({
+          tone: "error",
+          message:
+            "The form hit an issue. You can still reach me through LinkedIn or GitHub.",
+        });
+      })
+      .finally(() => setIsSending(false));
+  }
 
-        emailjs.sendForm('service_qofzyvw', 'template_28vydm8', e.target, 'user_gMw290SR4jHVVSbqWArD0')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
+  return (
+    <main className="page-shell contact-page">
+      <section className="contact-hero">
+        <p className="eyebrow">Contact</p>
+        <h1>Send a signal.</h1>
+        <p>
+          Have a software engineering role, product platform, or complex
+          workflow worth talking through? Send the context and I will get back
+          to you.
+        </p>
+      </section>
 
-        e.target.reset()
+      <section className="contact-layout">
+        <form className="contact-form glass-panel" onSubmit={sendEmail}>
+          <label>
+            Name
+            <input name="name" required />
+          </label>
+          <label>
+            Email address
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Subject
+            <input name="subject" required />
+          </label>
+          <label>
+            Message
+            <textarea rows={6} name="message" required />
+          </label>
 
-    }
+          <button className="button button-primary" type="submit" disabled={isSending}>
+            {isSending ? "Sending..." : "Send message"}
+          </button>
+        </form>
 
+        <aside className={`contact-console glass-panel ${status.tone}`} aria-live="polite">
+          <div className="console-header">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div className="console-lines">
+            <span>contact.channel</span>
+            <span>status: {status.tone}</span>
+            <span>focus: scalable systems, frontend architecture, backend integrations</span>
+            <span>{status.message}</span>
+          </div>
 
-
-
-
-    return (
-
-        <div className='contact-div'>
-            <div className='contact-text'>
-                Feel free to message me about anything!
-
-            </div>
-            <div className='email-form-div'>
-
-                <Form onSubmit={sendEmail}>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Name:</Form.Label>
-                        <Form.Control name='name' />
-                    </Form.Group>
-
-                    <Form.Group className="mb-3">
-                        <Form.Label>Email address:</Form.Label>
-                        <Form.Control type="email" name='email' />
-                    </Form.Group>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Subject:</Form.Label>
-                        <Form.Control name='subject' />
-                    </Form.Group>
-
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                        <Form.Label>Message:</Form.Label>
-                        <Form.Control as="textarea" rows={3} name='message' />
-                    </Form.Group>
-
-
-                    <div className='button-div'>
-
-                        <Button className='contact-button' variant="primary" type="submit">
-                            Submit
-                        </Button>
-                    </div>
-                </Form>
-            </div>
-        </div>
-
-
-
-    );
+          <div className="contact-links">
+            <a
+              href="https://www.linkedin.com/in/javier-j-marin/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a href="https://github.com/jaym832" target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          </div>
+        </aside>
+      </section>
+    </main>
+  );
 }
 
 export default Contact;
