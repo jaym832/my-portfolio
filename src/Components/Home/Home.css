@@ -62,7 +62,7 @@
   margin-top: 26px;
 }
 
-.quick-command-row span {
+.quick-command-row a {
   border: 1px solid rgba(119, 242, 161, 0.25);
   border-radius: 999px;
   padding: 7px 10px;
@@ -71,6 +71,15 @@
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 0.78rem;
   font-weight: 900;
+  transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.quick-command-row a:hover,
+.quick-command-row a:focus-visible {
+  border-color: rgba(119, 242, 161, 0.55);
+  background: rgba(119, 242, 161, 0.14);
+  outline: none;
+  transform: translateY(-2px);
 }
 
 .operator-card {
@@ -258,30 +267,9 @@
   gap: 26px;
 }
 
-.resume-snapshot-section,
-.capability-section,
-.current-role-section {
+.capability-section {
   display: grid;
   gap: 24px;
-}
-
-.resume-snapshot-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.resume-snapshot-card {
-  min-height: 210px;
-  padding: 22px;
-}
-
-.resume-snapshot-card h3 {
-  color: var(--green);
-}
-
-.resume-snapshot-card p {
-  margin-bottom: 0;
 }
 
 .capability-grid {
@@ -301,102 +289,6 @@
 
 .capability-card p {
   margin-bottom: 0;
-}
-
-.current-role-card {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 24px;
-  padding: 24px;
-}
-
-.current-role-card div {
-  display: grid;
-  align-content: start;
-  gap: 8px;
-}
-
-.current-role-card span {
-  color: var(--amber);
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  font-weight: 900;
-}
-
-.current-role-card strong {
-  color: var(--muted-strong);
-}
-
-.current-role-card ul {
-  display: grid;
-  gap: 14px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.current-role-card li {
-  position: relative;
-  padding-left: 18px;
-  color: var(--muted-strong);
-  line-height: 1.62;
-}
-
-.current-role-card li::before {
-  position: absolute;
-  left: 0;
-  color: var(--green);
-  content: "•";
-}
-
-.stack-universe {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.stack-card {
-  display: grid;
-  align-content: start;
-  gap: 16px;
-  min-height: 260px;
-  padding: 20px;
-}
-
-.stack-card:nth-child(1),
-.stack-card:nth-child(2) {
-  grid-column: span 3;
-}
-
-.stack-card:nth-child(3),
-.stack-card:nth-child(4),
-.stack-card:nth-child(5),
-.stack-card:nth-child(6) {
-  grid-column: span 2;
-}
-
-.stack-card span {
-  color: var(--amber);
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  font-size: 0.78rem;
-  font-weight: 900;
-}
-
-.stack-card div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.stack-card em {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 8px 10px;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--muted-strong);
-  font-size: 0.82rem;
-  font-style: normal;
-  font-weight: 750;
-  line-height: 1.2;
 }
 
 .project-heading {
@@ -469,49 +361,9 @@
 @media (max-width: 980px) {
   .hero-console,
   .impact-dashboard,
-  .resume-snapshot-grid,
   .capability-grid,
   .featured-projects {
     grid-template-columns: 1fr;
-  }
-
-  .current-role-card {
-    grid-template-columns: 1fr;
-  }
-
-  .stack-universe {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .stack-card,
-  .stack-card:nth-child(1),
-  .stack-card:nth-child(2),
-  .stack-card:nth-child(3),
-  .stack-card:nth-child(4),
-  .stack-card:nth-child(5) {
-    grid-column: span 1;
-  }
-}
-
-@media (max-width: 760px) {
-  .stack-universe {
-    grid-template-columns: 1fr;
-  }
-
-  .stack-card,
-  .stack-card:nth-child(1),
-  .stack-card:nth-child(2),
-  .stack-card:nth-child(3),
-  .stack-card:nth-child(4),
-  .stack-card:nth-child(5),
-  .stack-card:nth-child(6) {
-    grid-column: 1 / -1;
-    min-height: auto;
-    padding: 18px;
-  }
-
-  .stack-card h3 {
-    max-width: 18rem;
   }
 }
 
@@ -547,5 +399,6 @@
   .featured-project:hover,
   .featured-project:focus-visible {
     transform: none;
+    transition: none;
   }
 }

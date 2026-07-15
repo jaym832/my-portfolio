@@ -63,8 +63,6 @@
 }
 
 .timeline-section,
-.team-habits-section,
-.about-capability-section,
 .about-skills-section,
 .personality-section {
   display: grid;
@@ -139,9 +137,7 @@
 }
 
 .about-skill-grid,
-.team-habits-grid,
-.about-capability-grid,
-.personality-grid,
+.personal-profile-grid,
 .education-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -149,27 +145,12 @@
 }
 
 .about-skill-card,
-.team-habits-grid article,
-.about-capability-grid article,
-.personality-grid article,
 .education-card {
   padding: 22px;
 }
 
-.team-habits-grid h3 {
-  color: var(--green);
-}
-
-.team-habits-grid p {
-  margin-bottom: 0;
-}
-
-.about-capability-grid h3 {
+.about-skill-card h3 {
   color: var(--cyan);
-}
-
-.about-capability-grid p {
-  margin-bottom: 0;
 }
 
 .education-section {
@@ -194,17 +175,150 @@
   margin-bottom: 0;
 }
 
-.personality-grid p {
+.personal-profile-grid {
+  grid-template-columns: 1fr;
+}
+
+.personal-terminal-card {
+  position: relative;
+  border: 1px solid rgba(119, 242, 161, 0.28);
+  border-radius: 22px;
+  background:
+    linear-gradient(rgba(119, 242, 161, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(119, 242, 161, 0.035) 1px, transparent 1px),
+    radial-gradient(circle at top left, rgba(119, 242, 161, 0.15), transparent 20rem),
+    rgba(4, 10, 8, 0.88);
+  background-size: 24px 24px, 24px 24px, auto, auto;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.35),
+    inset 0 0 40px rgba(119, 242, 161, 0.08);
+}
+
+.personal-terminal-card {
+  overflow: hidden;
+}
+
+.personal-terminal-card::after {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(rgba(255, 255, 255, 0.045) 50%, transparent 50%);
+  background-size: 100% 5px;
+  content: "";
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.personal-terminal-bar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid rgba(119, 242, 161, 0.22);
+  padding: 12px 16px;
+  background: rgba(119, 242, 161, 0.08);
+  color: var(--green);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.personal-terminal-body {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 24px;
+}
+
+.terminal-kicker,
+.terminal-command-line {
+  width: fit-content;
+  margin: 0;
+  color: var(--green);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.personal-terminal-card h3 {
+  max-width: 680px;
   margin-bottom: 0;
+  color: #d8ffe3;
+  font-size: clamp(1.7rem, 3vw, 2.7rem);
+  text-shadow: 0 0 18px rgba(119, 242, 161, 0.18);
+}
+
+.personal-terminal-card p {
+  margin-bottom: 0;
+  color: #b8d9c2;
+}
+
+.personal-readout {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 4px 0;
+}
+
+.personal-readout div {
+  border: 1px solid rgba(119, 242, 161, 0.18);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(119, 242, 161, 0.055);
+}
+
+.personal-readout dt {
+  margin-bottom: 5px;
+  color: rgba(119, 242, 161, 0.78);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.personal-readout dd {
+  margin: 0;
+  color: #e7ffed;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.personal-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.personal-tags em {
+  border: 1px solid rgba(119, 242, 161, 0.26);
+  border-radius: 999px;
+  padding: 8px 10px;
+  background: rgba(119, 242, 161, 0.08);
+  color: #d8ffe3;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 850;
 }
 
 @media (max-width: 860px) {
   .about-grid,
   .about-skill-grid,
-  .team-habits-grid,
-  .about-capability-grid,
-  .personality-grid,
+  .personal-profile-grid,
   .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-readout {
     grid-template-columns: 1fr;
   }
 }

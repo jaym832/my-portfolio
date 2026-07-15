@@ -6,11 +6,8 @@ import resumeFile from "../Home/images/Javier-Marin-Software-Engineer-Resume-202
 import projects, {
   capabilityCards,
   commandActions,
-  experience,
   impactStats,
   profileFacts,
-  resumeSnapshot,
-  skillGroups,
 } from "../Portfolio/projectData";
 
 const terminalViews = {
@@ -70,7 +67,12 @@ function Home() {
 
           <div className="quick-command-row" aria-label="Command shortcuts">
             {commandActions.slice(0, 4).map((action) => (
-              <span key={action.command}>/{action.command}</span>
+              <a
+                key={action.command}
+                href={action.target === "resume" ? resumeFile : action.target}
+              >
+                /{action.command}
+              </a>
             ))}
           </div>
         </div>
@@ -135,21 +137,6 @@ function Home() {
         ))}
       </section>
 
-      <section className="resume-snapshot-section">
-        <div className="section-heading">
-          <p className="eyebrow">Resume signal</p>
-          <h2>Three ways the resume shows up in the product work.</h2>
-        </div>
-        <div className="resume-snapshot-grid">
-          {resumeSnapshot.map((item) => (
-            <article className="resume-snapshot-card glass-panel" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="capability-section">
         <div className="section-heading">
           <p className="eyebrow">What I am good at</p>
@@ -160,45 +147,6 @@ function Home() {
             <article className="capability-card glass-panel" key={item.title}>
               <h3>{item.title}</h3>
               <p>{item.body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="current-role-section">
-        <div className="section-heading">
-          <p className="eyebrow">Current role</p>
-          <h2>{experience[0].role} at {experience[0].company}</h2>
-        </div>
-        <div className="current-role-card glass-panel">
-          <div>
-            <span>{experience[0].period}</span>
-            <strong>{experience[0].location}</strong>
-          </div>
-          <ul>
-            {experience[0].bullets.map((bullet) => (
-              <li key={bullet}>{bullet}</li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className="section-block" id="stack">
-        <div className="section-heading">
-          <p className="eyebrow">Stack map</p>
-          <h2>The tools change by problem. The habit is connecting the whole path.</h2>
-        </div>
-
-        <div className="stack-universe">
-          {skillGroups.map((group, groupIndex) => (
-            <article className="stack-card glass-panel" key={group.title}>
-              <span>0{groupIndex + 1}</span>
-              <h3>{group.title}</h3>
-              <div>
-                {group.items.map((item) => (
-                  <em key={item}>{item}</em>
-                ))}
-              </div>
             </article>
           ))}
         </div>

@@ -1,13 +1,10 @@
 import React from "react";
 import "./About.css";
 import {
-  capabilityCards,
   education,
   experience,
-  personalityCards,
   profileFacts,
   skillGroups,
-  teamHabits,
 } from "../Portfolio/projectData";
 
 function About() {
@@ -63,31 +60,20 @@ function About() {
         </article>
       </section>
 
-      <section className="team-habits-section">
+      <section className="about-skills-section" id="capabilities">
         <div className="section-heading">
-          <p className="eyebrow">Team habits</p>
-          <h2>The kind of engineer I would want to work with.</h2>
+          <p className="eyebrow">Capabilities</p>
+          <h2>Tools I have used to get those flows over the line.</h2>
         </div>
-        <div className="team-habits-grid">
-          {teamHabits.map((item) => (
-            <article className="glass-panel" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="about-capability-section">
-        <div className="section-heading">
-          <p className="eyebrow">Working style</p>
-          <h2>Where I tend to create leverage.</h2>
-        </div>
-        <div className="about-capability-grid">
-          {capabilityCards.map((item) => (
-            <article className="glass-panel" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
+        <div className="about-skill-grid">
+          {skillGroups.map((group) => (
+            <article className="about-skill-card glass-panel" key={group.title}>
+              <h3>{group.title}</h3>
+              <div>
+                {group.items.map((item) => (
+                  <span key={item}>{item}</span>
+                ))}
+              </div>
             </article>
           ))}
         </div>
@@ -101,10 +87,15 @@ function About() {
 
         <div className="timeline-list">
           {experience.map((item) => (
-            <article className="timeline-item glass-panel" key={`${item.company}-${item.period}`}>
+            <article
+              className="timeline-item glass-panel"
+              key={`${item.company}-${item.period}`}
+            >
               <span>{item.period}</span>
               <h3>{item.role}</h3>
-              <strong>{item.company} · {item.location}</strong>
+              <strong>
+                {item.company} · {item.location}
+              </strong>
               <p>{item.summary}</p>
               <ul>
                 {item.bullets.map((bullet) => (
@@ -137,37 +128,52 @@ function About() {
         </div>
       </section>
 
-      <section className="about-skills-section">
-        <div className="section-heading">
-          <p className="eyebrow">Capabilities</p>
-          <h2>Tools I have used to get those flows over the line.</h2>
-        </div>
-        <div className="about-skill-grid">
-          {skillGroups.map((group) => (
-            <article className="about-skill-card glass-panel" key={group.title}>
-              <h3>{group.title}</h3>
-              <div>
-                {group.items.map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="personality-section">
         <div className="section-heading">
           <p className="eyebrow">Outside the editor</p>
-          <h2>The inputs that keep the engineering brain curious.</h2>
+          <h2>A little more about the person behind the code.</h2>
         </div>
-        <div className="personality-grid">
-          {personalityCards.map((card) => (
-            <article className="glass-panel" key={card.title}>
-              <h3>{card.title}</h3>
-              <p>{card.body}</p>
-            </article>
-          ))}
+        <div className="personal-profile-grid">
+          <article className="personal-terminal-card">
+            <div className="personal-terminal-bar">
+              <span>PERSONAL_PROFILE.LOG</span>
+              <span>STATUS: ONLINE</span>
+            </div>
+
+            <div className="personal-terminal-body">
+              <p className="terminal-kicker">Initializing identity scan...</p>
+              <h3>Javier Marin, usually JJ.</h3>
+              <dl className="personal-readout">
+                <div>
+                  <dt>Location</dt>
+                  <dd>Houston, TX</dd>
+                </div>
+                <div>
+                  <dt>Alma mater</dt>
+                  <dd>University of Houston</dd>
+                </div>
+                <div>
+                  <dt>Signal</dt>
+                  <dd>Go Coogs!</dd>
+                </div>
+              </dl>
+              <p>
+                When I'm not coding, I am usually spending time with my family,
+                reading, watching films, or working out. I also have a curiosity
+                for new tools and technologies, which keeps me exploring and
+                learning.
+              </p>
+              <p className="terminal-command-line">&gt; hobbies --list</p>
+              <div className="personal-tags" aria-label="Personal interests">
+                <em>Family</em>
+                <em>Books</em>
+                <em>Films</em>
+                <em>Working out</em>
+                <em>Tech curiosity</em>
+                <em>Video games</em>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
     </main>

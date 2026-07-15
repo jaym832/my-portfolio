@@ -218,24 +218,6 @@ export const skillGroups = [
   },
 ];
 
-export const resumeSnapshot = [
-  {
-    title: "Messy workflows",
-    body:
-      "I like the part where requirements are still fuzzy and the job is to find the usable path through them.",
-  },
-  {
-    title: "Product surfaces",
-    body:
-      "Most of my work sits where people click, search, configure, submit, review, and depend on the system to be clear.",
-  },
-  {
-    title: "Business proof",
-    body:
-      "The strongest resume bullets are tied to revenue, fewer installation mistakes, and faster handling for operations teams.",
-  },
-];
-
 export const capabilityCards = [
   {
     title: "Clarify the unclear part",
@@ -264,58 +246,12 @@ export const capabilityCards = [
   },
 ];
 
-export const teamHabits = [
-  {
-    title: "Make the work easy to reason about",
-    body:
-      "I try to leave tickets, pull requests, and handoffs clearer than I found them. Good teammates reduce guesswork.",
-  },
-  {
-    title: "Bring people in early",
-    body:
-      "I like working with product, design, QA, backend, and operations before the build gets expensive to change.",
-  },
-  {
-    title: "Explain tradeoffs plainly",
-    body:
-      "I care about naming the cost of a shortcut, the risk in an edge case, and the reason behind a technical choice.",
-  },
-  {
-    title: "Own the boring finish line",
-    body:
-      "Shipping includes review notes, tests, release details, monitoring, cleanup, and making sure the change behaves in the real world.",
-  },
-];
-
 export const commandActions = [
   { command: "impact", description: "Show the business wins", target: "/#impact" },
-  { command: "stack", description: "Inspect the engineering toolchain", target: "/#stack" },
+  { command: "capabilities", description: "Inspect the engineering toolchain", target: "/about#capabilities" },
   { command: "projects", description: "Open public case studies", target: "/portfolio" },
   { command: "resume", description: "Review the latest resume PDF", target: "resume" },
   { command: "contact", description: "Start a conversation", target: "/contact" },
-];
-
-export const personalityCards = [
-  {
-    title: "Interactive systems",
-    body:
-      "I like learning how complex systems behave, spotting patterns, and improving the loop over time.",
-  },
-  {
-    title: "Reading",
-    body:
-      "Books scratch the same itch as good docs: they make a bigger world click into place.",
-  },
-  {
-    title: "Movies",
-    body:
-      "I pay attention to pacing, tone, and how small details make a moment land.",
-  },
-  {
-    title: "Technology",
-    body:
-      "I enjoy tinkering with tools, patterns, and ideas that make building feel sharper.",
-  },
 ];
 
 export const experience = [
