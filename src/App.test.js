@@ -6,7 +6,7 @@ test("renders Javier portfolio homepage", () => {
 
   expect(
     screen.getByRole("heading", {
-      name: /building revenue-driving customer-facing systems at scale/i,
+      name: /i turn messy workflows into software people can actually use/i,
     })
   ).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /view case studies/i })).toBeInTheDocument();

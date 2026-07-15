@@ -54,7 +54,17 @@
   line-height: 1.45;
 }
 
+.about-work-panel p {
+  margin-bottom: 14px;
+}
+
+.about-work-panel p:last-child {
+  margin-bottom: 0;
+}
+
 .timeline-section,
+.team-habits-section,
+.about-capability-section,
 .about-skills-section,
 .personality-section {
   display: grid;
@@ -129,6 +139,8 @@
 }
 
 .about-skill-grid,
+.team-habits-grid,
+.about-capability-grid,
 .personality-grid,
 .education-grid {
   display: grid;
@@ -137,9 +149,27 @@
 }
 
 .about-skill-card,
+.team-habits-grid article,
+.about-capability-grid article,
 .personality-grid article,
 .education-card {
   padding: 22px;
+}
+
+.team-habits-grid h3 {
+  color: var(--green);
+}
+
+.team-habits-grid p {
+  margin-bottom: 0;
+}
+
+.about-capability-grid h3 {
+  color: var(--cyan);
+}
+
+.about-capability-grid p {
+  margin-bottom: 0;
 }
 
 .education-section {
@@ -171,6 +201,8 @@
 @media (max-width: 860px) {
   .about-grid,
   .about-skill-grid,
+  .team-habits-grid,
+  .about-capability-grid,
   .personality-grid,
   .education-grid {
     grid-template-columns: 1fr;

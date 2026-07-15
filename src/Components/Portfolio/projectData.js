@@ -27,22 +27,22 @@ const projects = [
   {
     slug: "fureverhomes",
     title: "FurEverHomes",
-    eyebrow: "Full-stack adoption platform",
+    eyebrow: "Adoption platform",
     image: fureverimage,
     year: "Capstone build",
     summary:
-      "A pet adoption and re-homing platform with authenticated user flows, searchable pet profiles, and location-aware discovery.",
+      "A pet adoption platform with account flows, searchable pet profiles, and location aware discovery.",
     objective:
-      "Help people browse adoption and re-homing options through a full-stack pet marketplace.",
+      "Help people browse adoption and rehoming options through a practical pet marketplace.",
     role:
       "Owned the application experience across React views, Rails APIs, authentication, serializers, and Google Maps integration.",
     result:
-      "Demonstrates end-to-end product thinking across auth, maps, API design, and user flows.",
+      "Shows how I think through auth, maps, API design, and user flow as one experience.",
     stack: ["React", "Rails", "Google Maps API", "Authentication", "Bootstrap"],
     highlights: [
-      "Modeled adoption and re-homing workflows around real user intent.",
+      "Modeled adoption and rehoming flows around real user intent.",
       "Integrated map-based discovery so location became part of the browsing experience.",
-      "Separated frontend and backend repositories with a clear API boundary.",
+      "Separated the client and server with a clear API boundary.",
     ],
     screenshots: [
       fureverhomes1,
@@ -78,12 +78,12 @@ const projects = [
     role:
       "Partnered on interactive state, React integration, score persistence, and Rails-backed player data.",
     result:
-      "Shows comfort blending interactive UI, runtime state, and backend persistence.",
+      "Shows comfort blending interactive UI, runtime state, and saved backend records.",
     stack: ["React", "Kaboom.js", "Rails", "PostgreSQL", "Axios"],
     highlights: [
       "Connected runtime state to backend persistence for player scores.",
-      "Balanced fast canvas interactions with ordinary web app routing and forms.",
-      "Collaborated across frontend interaction design and backend data modeling.",
+      "Balanced fast canvas interactions with ordinary routing and forms.",
+      "Collaborated across interaction design and data modeling.",
     ],
     screenshots: [
       spacecowboy1,
@@ -102,7 +102,7 @@ const projects = [
     title: "Nutrition Calculator",
     eyebrow: "Personal tracking application",
     image: nutrition,
-    year: "Full-stack build",
+    year: "Full stack build",
     summary:
       "A calorie and nutrition tracker for logging meals, reviewing daily intake, and building healthier visibility into food habits.",
     objective:
@@ -110,7 +110,7 @@ const projects = [
     role:
       "Designed the React interface and connected it to a Ruby backend with structured nutrition records.",
     result:
-      "Shows practical CRUD workflows, data modeling, and API-backed frontend state.",
+      "Shows practical CRUD flows, data modeling, and API backed state.",
     stack: ["React", "Ruby", "SQLite", "Active Record", "Bootstrap"],
     highlights: [
       "Created a focused logging flow with persistent daily nutrition entries.",
@@ -142,7 +142,7 @@ const projects = [
     highlights: [
       "Implemented rule logic for rounds, cards, scoring, and win states.",
       "Shipped under hackathon constraints with a small team.",
-      "Deployed a playable public version with code available for review.",
+      "Deployed a playable public version with code available to review.",
     ],
     screenshots: [war1, war2, war3, war4],
     links: [
@@ -158,29 +158,29 @@ export const impactStats = [
     label: "revenue influenced",
     title: "Partial-pay commerce module",
     detail:
-      "Collaborated on an online partial-pay option for custom countertop sales in partial-pay states, generating $6M in revenue and covering 10% of total countertop sales.",
+      "Collaborated on an online partial pay option for custom countertop sales. The feature generated $6M in revenue and covered 10% of total countertop sales.",
   },
   {
     value: "75%",
     label: "fewer install errors",
     title: "Window-treatment design builder",
     detail:
-      "Launched an in-store design builder for window treatments that streamlined contractor workflows, improved customer satisfaction, and reduced installation errors by 75%.",
+      "Launched an in store design builder for window treatments. It made contractor work easier and reduced installation errors by 75%.",
   },
   {
     value: "40%",
     label: "faster handling time",
     title: "Internal operations tooling",
     detail:
-      "Optimized internal systems with real-time data tracking, customizable dashboards, and enhanced search capabilities, reducing average handling time by 40%.",
+      "Improved internal tools with live tracking, custom dashboards, and better search. Average handling time dropped by 40%.",
   },
 ];
 
 export const profileFacts = [
   { label: "Experience", value: "4+ years" },
   { label: "Current", value: "Software Engineer, The Home Depot" },
-  { label: "Focus", value: "Revenue-driving customer-facing systems at scale" },
-  { label: "Strengths", value: "Frontend architecture, backend integrations, system optimization" },
+  { label: "Best fit", value: "Teams turning complicated workflows into usable products" },
+  { label: "Range", value: "React interfaces, service integrations, dashboards, observability" },
   { label: "Location", value: "Houston, TX" },
 ];
 
@@ -205,28 +205,90 @@ export const skillGroups = [
     title: "Testing & Build",
     items: ["Vite", "Webpack", "Storybook", "Jest"],
   },
+  {
+    title: "Workflow & Automation",
+    items: [
+      "GitHub Copilot",
+      "AI assisted debugging",
+      "Prompting",
+      "Developer automation",
+      "Test scaffolding",
+      "Documentation drafts",
+    ],
+  },
 ];
 
 export const resumeSnapshot = [
   {
-    title: "Current scope",
+    title: "Messy workflows",
     body:
-      "Complex, multi-team platforms at The Home Depot across customer-facing workflows, internal systems, and integrations.",
+      "I like the part where requirements are still fuzzy and the job is to find the usable path through them.",
   },
   {
-    title: "Engineering lane",
+    title: "Product surfaces",
     body:
-      "Performant frontend architecture, backend integrations, and system optimization for measurable business outcomes.",
+      "Most of my work sits where people click, search, configure, submit, review, and depend on the system to be clear.",
   },
   {
-    title: "Operating style",
+    title: "Business proof",
     body:
-      "Known for translating ambiguous requirements into scalable solutions that product and operations teams can actually use.",
+      "The strongest resume bullets are tied to revenue, fewer installation mistakes, and faster handling for operations teams.",
+  },
+];
+
+export const capabilityCards = [
+  {
+    title: "Clarify the unclear part",
+    body:
+      "Turn loose business needs into flows, states, edge cases, and pieces a team can ship.",
+  },
+  {
+    title: "Design dense tools",
+    body:
+      "Make busy screens easier to scan, search, complete, and hand off between people.",
+  },
+  {
+    title: "Connect the layers",
+    body:
+      "Bridge React screens with APIs, services, data, deployment, and monitoring.",
+  },
+  {
+    title: "Improve what already exists",
+    body:
+      "Add speed, visibility, and reliability to tools people depend on every day.",
+  },
+  {
+    title: "Use AI where it helps",
+    body:
+      "Use Copilot and prompts for boilerplate, test ideas, docs, and small automations while still owning the final code.",
+  },
+];
+
+export const teamHabits = [
+  {
+    title: "Make the work easy to reason about",
+    body:
+      "I try to leave tickets, pull requests, and handoffs clearer than I found them. Good teammates reduce guesswork.",
+  },
+  {
+    title: "Bring people in early",
+    body:
+      "I like working with product, design, QA, backend, and operations before the build gets expensive to change.",
+  },
+  {
+    title: "Explain tradeoffs plainly",
+    body:
+      "I care about naming the cost of a shortcut, the risk in an edge case, and the reason behind a technical choice.",
+  },
+  {
+    title: "Own the boring finish line",
+    body:
+      "Shipping includes review notes, tests, release details, monitoring, cleanup, and making sure the change behaves in the real world.",
   },
 ];
 
 export const commandActions = [
-  { command: "impact", description: "Show revenue and workflow wins", target: "/#impact" },
+  { command: "impact", description: "Show the business wins", target: "/#impact" },
   { command: "stack", description: "Inspect the engineering toolchain", target: "/#stack" },
   { command: "projects", description: "Open public case studies", target: "/portfolio" },
   { command: "resume", description: "Review the latest resume PDF", target: "resume" },
@@ -263,11 +325,11 @@ export const experience = [
     location: "Houston, TX",
     role: "Software Engineer",
     summary:
-      "Building revenue-driving, customer-facing systems at scale across complex, multi-team platforms.",
+      "Shipping commerce, design tool, dashboard, and search improvements across a large retail platform.",
     bullets: [
-      "Collaborated on an online partial-pay option for custom countertop sales in partial-pay states, generating $6M in revenue and covering 10% of total countertop sales.",
-      "Launched an in-store design builder tool for window treatments that streamlined contractor workflows, improved customer satisfaction, and reduced installation errors by 75%.",
-      "Optimized internal systems by building real-time data tracking, customizable dashboards, and enhanced search capabilities, reducing average handling time by 40%.",
+      "Collaborated on an online partial pay option for custom countertop sales, generating $6M in revenue and covering 10% of total countertop sales.",
+      "Launched an in store design builder tool for window treatments that made contractor work easier and reduced installation errors by 75%.",
+      "Improved internal tools with live data tracking, custom dashboards, and better search, reducing average handling time by 40%.",
     ],
     stack: ["React", "Redux", "Java", "Spring Boot", "GraphQL", "AWS", "New Relic"],
   },
@@ -277,10 +339,10 @@ export const experience = [
     location: "Houston, TX",
     role: "Sales Associate",
     summary:
-      "Built early customer-facing instincts through revenue ownership, communication, and product presentation.",
+      "Built early customer instincts through revenue ownership, communication, and product presentation.",
     bullets: [
       "Boosted sales revenue by 30% by keeping merchandise organized and presented to drive customer interest.",
-      "Used communication and rapport-building to close sales and meet targets.",
+      "Used communication and rapport building to close sales and meet targets.",
       "Partnered with retail representatives to optimize sales by 25% through improved product presentations and advertising collateral.",
     ],
     stack: ["Customer discovery", "Sales", "Communication", "Product presentation"],
@@ -296,7 +358,7 @@ export const education = [
   {
     school: "Flatiron School",
     period: "Jul '21",
-    credential: "Full Stack Web Development, Ruby on Rails and JavaScript program",
+    credential: "Full stack web development, Ruby on Rails and JavaScript program",
   },
   {
     school: "Lone Star College",

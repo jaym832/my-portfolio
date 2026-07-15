@@ -8,13 +8,12 @@ function Portfolio() {
     <main className="page-shell portfolio-page">
       <section className="portfolio-hero">
         <p className="eyebrow">Work directory</p>
-        <h1>Public builds that support the resume story.</h1>
+        <h1>Public builds, with the hindsight left in.</h1>
         <p>
-          My professional resume now carries the strongest business outcomes:
-          revenue-driving commerce work, workflow accuracy gains, and internal
-          system optimization. These public projects add visible evidence of
-          full-stack fundamentals, interface thinking, API work, and shipping
-          habits.
+          These projects are from earlier in my path, so I do not want to dress
+          them up as enterprise case studies. They show the basics clearly:
+          user flows, data modeling, API boundaries, interactive state, and a
+          habit of getting things shipped.
         </p>
       </section>
 

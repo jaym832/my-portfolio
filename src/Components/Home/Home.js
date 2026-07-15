@@ -4,6 +4,7 @@ import "./Home.css";
 import pic from "../Home/images/circle-cropped.png";
 import resumeFile from "../Home/images/Javier-Marin-Software-Engineer-Resume-2026.pdf";
 import projects, {
+  capabilityCards,
   commandActions,
   experience,
   impactStats,
@@ -17,21 +18,21 @@ const terminalViews = {
     "load ./javier.profile",
     "role: software engineer",
     "current: The Home Depot",
-    "scope: revenue-driving systems at scale",
-    "known_for: ambiguous requirements -> scalable solutions",
+    "favorite_problem: messy workflows",
+    "output: clear screens + reliable handoffs",
   ],
   impact: [
     "query impact --recent",
-    "$6M revenue influenced",
-    "10% of total countertop sales covered",
-    "75% fewer installation errors",
-    "40% faster average handling time",
+    "commerce: $6M partial pay path",
+    "store tools: 75% fewer installation misses",
+    "ops: 40% faster handling",
+    "pattern: remove friction where teams feel it",
   ],
   stack: [
     "scan stack --production",
     "React / Redux / Vue",
     "Node / Java / Spring Boot",
-    "GraphQL / SQL / AWS / New Relic",
+    "SQL / GraphQL / AWS / New Relic",
   ],
 };
 
@@ -50,12 +51,12 @@ function Home() {
       <section className="hero-console" onMouseMove={handleHeroMove}>
         <div className="hero-copy">
           <p className="eyebrow">Software Engineer | The Home Depot</p>
-          <h1>Building revenue-driving customer-facing systems at scale.</h1>
+          <h1>I turn messy workflows into software people can actually use.</h1>
           <p className="hero-lede">
-            Full Stack Software Engineer with 4+ years of experience on
-            complex, multi-team platforms. I translate ambiguous requirements
-            into scalable solutions through performant frontend architecture,
-            backend integrations, and system optimization.
+            I work across retail commerce, in store design tools, dashboards,
+            search, and service integrations. The common thread is simple: make
+            complicated work easier to complete, easier to trust, and easier to
+            measure.
           </p>
 
           <div className="hero-actions">
@@ -137,11 +138,26 @@ function Home() {
       <section className="resume-snapshot-section">
         <div className="section-heading">
           <p className="eyebrow">Resume signal</p>
-          <h2>The throughline: product impact, systems polish, and measurable outcomes.</h2>
+          <h2>Three ways the resume shows up in the product work.</h2>
         </div>
         <div className="resume-snapshot-grid">
           {resumeSnapshot.map((item) => (
             <article className="resume-snapshot-card glass-panel" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="capability-section">
+        <div className="section-heading">
+          <p className="eyebrow">What I am good at</p>
+          <h2>The useful middle between product intent and production code.</h2>
+        </div>
+        <div className="capability-grid">
+          {capabilityCards.map((item) => (
+            <article className="capability-card glass-panel" key={item.title}>
               <h3>{item.title}</h3>
               <p>{item.body}</p>
             </article>
@@ -170,7 +186,7 @@ function Home() {
       <section className="section-block" id="stack">
         <div className="section-heading">
           <p className="eyebrow">Stack map</p>
-          <h2>A toolchain for shipping product work, not just prototypes.</h2>
+          <h2>The tools change by problem. The habit is connecting the whole path.</h2>
         </div>
 
         <div className="stack-universe">
@@ -192,7 +208,7 @@ function Home() {
         <div className="section-heading project-heading">
           <div>
             <p className="eyebrow">Selected case files</p>
-            <h2>Project work, reframed as product evidence.</h2>
+            <h2>Older public builds, viewed through a more senior lens.</h2>
           </div>
           <Link className="text-button" to="/portfolio">
             Browse all work

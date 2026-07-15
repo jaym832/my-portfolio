@@ -259,6 +259,7 @@
 }
 
 .resume-snapshot-section,
+.capability-section,
 .current-role-section {
   display: grid;
   gap: 24px;
@@ -280,6 +281,25 @@
 }
 
 .resume-snapshot-card p {
+  margin-bottom: 0;
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.capability-card {
+  min-height: 210px;
+  padding: 22px;
+}
+
+.capability-card h3 {
+  color: var(--cyan);
+}
+
+.capability-card p {
   margin-bottom: 0;
 }
 
@@ -349,7 +369,8 @@
 
 .stack-card:nth-child(3),
 .stack-card:nth-child(4),
-.stack-card:nth-child(5) {
+.stack-card:nth-child(5),
+.stack-card:nth-child(6) {
   grid-column: span 2;
 }
 
@@ -448,6 +469,7 @@
   .hero-console,
   .impact-dashboard,
   .resume-snapshot-grid,
+  .capability-grid,
   .featured-projects {
     grid-template-columns: 1fr;
   }

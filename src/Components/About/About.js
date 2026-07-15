@@ -1,11 +1,13 @@
 import React from "react";
 import "./About.css";
 import {
+  capabilityCards,
   education,
   experience,
   personalityCards,
   profileFacts,
   skillGroups,
+  teamHabits,
 } from "../Portfolio/projectData";
 
 function About() {
@@ -13,12 +15,12 @@ function About() {
     <main className="page-shell about-page">
       <section className="about-hero">
         <p className="eyebrow">About</p>
-        <h1>Revenue-minded engineering with a systems brain.</h1>
+        <h1>I like the work between the ticket and the shipped thing.</h1>
         <p>
-          Full Stack Software Engineer with 4+ years of experience building
-          revenue-driving, customer-facing systems at scale. I work on complex,
-          multi-team platforms at The Home Depot and focus on performant
-          frontend architecture, backend integrations, and system optimization.
+          The interesting part is rarely just writing a component or wiring an
+          endpoint. It is understanding why the flow is painful, what the system
+          needs to remember, where the handoff breaks, and how to make the next
+          action obvious.
         </p>
       </section>
 
@@ -35,22 +37,66 @@ function About() {
           </dl>
         </article>
 
-        <article className="about-panel glass-panel">
+        <article className="about-panel glass-panel about-work-panel">
           <h2>How I work</h2>
           <p>
-            I am strongest where product ambiguity meets engineering execution:
-            clarifying requirements, finding the workflow shape, and translating
-            it into scalable software that teams can operate and customers can
-            use. The resume version is simple: measurable impact through
-            frontend polish, backend reliability, and system optimization.
+            I start by identifying the user, the decision they are trying to
+            make, and the points where the experience could break down. From
+            there, I think through application state, loading behavior, service
+            boundaries, data shape, release strategy, and the signals that will
+            show whether the change was successful.
+          </p>
+          <p>
+            I do my best work when product, design, QA, backend, and operations
+            are involved early, because the strongest solutions usually come
+            from viewing the same problem from multiple perspectives. I aim to
+            be the teammate who asks clear questions, communicates tradeoffs
+            without ego, documents the decisions that matter, and stays involved
+            through release rather than stopping once the code works locally.
+          </p>
+          <p>
+            I also use tools such as GitHub Copilot where they provide the most
+            value, including speeding up repetitive development, comparing
+            implementation approaches, drafting tests, and turning tedious tasks
+            into small automations.
           </p>
         </article>
+      </section>
+
+      <section className="team-habits-section">
+        <div className="section-heading">
+          <p className="eyebrow">Team habits</p>
+          <h2>The kind of engineer I would want to work with.</h2>
+        </div>
+        <div className="team-habits-grid">
+          {teamHabits.map((item) => (
+            <article className="glass-panel" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="about-capability-section">
+        <div className="section-heading">
+          <p className="eyebrow">Working style</p>
+          <h2>Where I tend to create leverage.</h2>
+        </div>
+        <div className="about-capability-grid">
+          {capabilityCards.map((item) => (
+            <article className="glass-panel" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="timeline-section">
         <div className="section-heading">
           <p className="eyebrow">Experience</p>
-          <h2>A practical path through product systems.</h2>
+          <h2>The resume details, with the context left in.</h2>
         </div>
 
         <div className="timeline-list">
@@ -94,7 +140,7 @@ function About() {
       <section className="about-skills-section">
         <div className="section-heading">
           <p className="eyebrow">Capabilities</p>
-          <h2>The stack is broad, but the throughline is building useful software.</h2>
+          <h2>Tools I have used to get those flows over the line.</h2>
         </div>
         <div className="about-skill-grid">
           {skillGroups.map((group) => (
@@ -113,7 +159,7 @@ function About() {
       <section className="personality-section">
         <div className="section-heading">
           <p className="eyebrow">Outside the editor</p>
-          <h2>A little personality, without turning the portfolio into a bit.</h2>
+          <h2>The inputs that keep the engineering brain curious.</h2>
         </div>
         <div className="personality-grid">
           {personalityCards.map((card) => (
