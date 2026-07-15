@@ -396,6 +396,7 @@
   font-size: 0.82rem;
   font-style: normal;
   font-weight: 750;
+  line-height: 1.2;
 }
 
 .project-heading {
@@ -492,6 +493,28 @@
   }
 }
 
+@media (max-width: 760px) {
+  .stack-universe {
+    grid-template-columns: 1fr;
+  }
+
+  .stack-card,
+  .stack-card:nth-child(1),
+  .stack-card:nth-child(2),
+  .stack-card:nth-child(3),
+  .stack-card:nth-child(4),
+  .stack-card:nth-child(5),
+  .stack-card:nth-child(6) {
+    grid-column: 1 / -1;
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .stack-card h3 {
+    max-width: 18rem;
+  }
+}
+
 @media (max-width: 620px) {
   .home-page {
     gap: 58px;
@@ -511,10 +534,6 @@
     width: 78px;
     height: 78px;
     border-radius: 18px;
-  }
-
-  .stack-universe {
-    grid-template-columns: 1fr;
   }
 
   .project-heading {
