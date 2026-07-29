@@ -13,7 +13,7 @@ import Portfolio from "./Components/Portfolio/Portfolio";
 import Contact from "./Components/Contact/Contact";
 import ProjectDetail from "./Components/Portfolio/ProjectDetail";
 import { commandActions } from "./Components/Portfolio/projectData";
-import resumeFile from "./Components/Home/images/Javier-Marin-Software-Engineer-Resume-Portfolio.pdf";
+import resumeFile from "./Components/Home/images/Javier-Marin-Software-Engineer-Resume-portfolio.pdf";
 
 function AppNav({ onOpenPalette }) {
   const location = useLocation();

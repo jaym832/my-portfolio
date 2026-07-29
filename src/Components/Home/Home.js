@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import pic from "../Home/images/circle-cropped.png";
-import resumeFile from "../Home/images/Javier-Marin-Software-Engineer-Resume-2026.pdf";
+import resumeFile from "../Home/images/Javier-Marin-Software-Engineer-Resume-portfolio.pdf";
 import projects, {
   capabilityCards,
   commandActions,
