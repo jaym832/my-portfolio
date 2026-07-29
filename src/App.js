@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Link, Route, Switch, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Link,
+  Route,
+  Switch,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
@@ -7,7 +13,7 @@ import Portfolio from "./Components/Portfolio/Portfolio";
 import Contact from "./Components/Contact/Contact";
 import ProjectDetail from "./Components/Portfolio/ProjectDetail";
 import { commandActions } from "./Components/Portfolio/projectData";
-import resumeFile from "./Components/Home/images/Javier-Marin-Software-Engineer-Resume-2026.pdf";
+import resumeFile from "./Components/Home/images/Javier-Marin-Software-Engineer-Resume-Portfolio.pdf";
 
 function AppNav({ onOpenPalette }) {
   const location = useLocation();
@@ -70,14 +76,22 @@ function CommandPalette({ isOpen, onClose }) {
         <div className="palette-input-row">
           <span aria-hidden="true">/</span>
           <p>Run a portfolio command</p>
-          <button type="button" onClick={onClose} aria-label="Close command palette">
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close command palette"
+          >
             Esc
           </button>
         </div>
 
         <div className="palette-actions">
           {commandActions.map((action) => (
-            <button key={action.command} type="button" onClick={() => handleAction(action)}>
+            <button
+              key={action.command}
+              type="button"
+              onClick={() => handleAction(action)}
+            >
               <strong>{action.command}</strong>
               <span>{action.description}</span>
             </button>
@@ -113,7 +127,10 @@ function AppShell() {
     <div className="site-frame">
       <div className="ambient-grid" aria-hidden="true"></div>
       <AppNav onOpenPalette={() => setIsPaletteOpen(true)} />
-      <CommandPalette isOpen={isPaletteOpen} onClose={() => setIsPaletteOpen(false)} />
+      <CommandPalette
+        isOpen={isPaletteOpen}
+        onClose={() => setIsPaletteOpen(false)}
+      />
 
       <Switch>
         <Route path="/" component={Home} exact />
